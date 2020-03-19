@@ -1,0 +1,28 @@
+eureka:
+  client:
+    register-with-eureka: true
+    
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+server:
+  port: 8088
+  
+spring:
+  application:
+    name: DEMO-PROVIDER-SERVICE
+    
+    
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_cloud_first_demo
+    username: postgres
+    password: ac3r
+    driver-class-name: org.postgresql.Driver
+    
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
